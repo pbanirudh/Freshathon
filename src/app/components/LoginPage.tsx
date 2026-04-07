@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Eye, EyeOff, Bus, Navigation2, Shield, Users } from "lucide-react";
 import { toast } from "sonner";
+import ritLogo from "../../assets/ritlogo.png";
 
 function HeroMap() {
   const [pos, setPos] = useState(0);
@@ -138,22 +139,8 @@ export function LoginPage({ onLogin }: Props) {
         <div style={{ position: "relative", zIndex: 1, textAlign: "center", maxWidth: 490, width: "100%" }}>
           {/* Brand */}
           <div style={{ marginBottom: 28, display: "flex", justifyContent: "center" }}>
-            <div style={{ display: "inline-flex", alignItems: "center", gap: 14, background: "#ffffff18", borderRadius: 16, padding: "12px 24px", backdropFilter: "blur(8px)" }}>
-              <div style={{ width: 52, height: 52, borderRadius: "50%", background: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <svg width="28" height="28" viewBox="0 0 32 36" fill="none">
-                  <path d="M16 2C10 2 6 8 6 14C6 22 16 34 16 34C16 34 26 22 26 14C26 8 22 2 16 2Z" fill="#EEF3FF" />
-                  <path d="M16 5L16 28" stroke="#1B4FD8" strokeWidth="1.5" strokeLinecap="round" />
-                  <path d="M16 10L11 15" stroke="#1B4FD8" strokeWidth="1.3" strokeLinecap="round" />
-                  <path d="M16 10L21 15" stroke="#1B4FD8" strokeWidth="1.3" strokeLinecap="round" />
-                  <path d="M16 17L12 21" stroke="#1B4FD8" strokeWidth="1.1" strokeLinecap="round" />
-                  <path d="M16 17L20 21" stroke="#1B4FD8" strokeWidth="1.1" strokeLinecap="round" />
-                  <circle cx="16" cy="10" r="2" fill="#F97316" />
-                </svg>
-              </div>
-              <div style={{ textAlign: "left" }}>
-                <div style={{ color: "#fff", fontWeight: 800, fontSize: 24, letterSpacing: 1, lineHeight: 1 }}>rit</div>
-                <div style={{ color: "#93C5FD", fontSize: 10, lineHeight: 1.5, marginTop: 3 }}>RAJALAKSHMI INSTITUTE<br />OF TECHNOLOGY</div>
-              </div>
+            <div style={{ display: "inline-flex", alignItems: "center", background: "#ffffff18", borderRadius: 16, padding: "12px 24px", backdropFilter: "blur(8px)" }}>
+              <img src={ritLogo} alt="RIT Logo" style={{ height: 52, width: "auto" }} />
             </div>
           </div>
 

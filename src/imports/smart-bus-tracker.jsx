@@ -1,4 +1,8 @@
 import { useState, useEffect, useRef } from "react";
+import React from 'react';
+import logoFile from "C:\Users\USER\OneDrive\Desktop\Freshathon-main\ritlogo.png"
+
+
 
 const COLORS = {
   primary: "#1B4FD8",
@@ -13,8 +17,7 @@ const COLORS = {
   white: "#FFFFFF",
 };
 
-// ─── Logo SVG ───────────────────────────────────────────────────────────────
-function RITLogo({ size = 48 }) {
+export function RITLogo({ size = 48 }) {
   return (
     <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
       <div
@@ -28,21 +31,20 @@ function RITLogo({ size = 48 }) {
           justifyContent: "center",
           boxShadow: "0 2px 8px #1B4FD840",
           flexShrink: 0,
+          overflow: "hidden"
         }}
       >
-        <svg width={size * 0.62} height={size * 0.62} viewBox="0 0 32 36" fill="none">
-          <path d="M16 2 C10 2 6 8 6 14 C6 22 16 34 16 34 C16 34 26 22 26 14 C26 8 22 2 16 2Z" fill="#fff" opacity="0.18" />
-          <path d="M16 5 L16 28" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" />
-          <path d="M16 10 L11 15" stroke="#fff" strokeWidth="1.3" strokeLinecap="round" />
-          <path d="M16 10 L21 15" stroke="#fff" strokeWidth="1.3" strokeLinecap="round" />
-          <path d="M16 17 L12 21" stroke="#fff" strokeWidth="1.1" strokeLinecap="round" />
-          <path d="M16 17 L20 21" stroke="#fff" strokeWidth="1.1" strokeLinecap="round" />
-          <circle cx="16" cy="10" r="2" fill="#F97316" />
-        </svg>
+        <img 
+          src={logoFile} 
+          alt="RIT Logo" 
+          style={{ width: "70%", height: "auto", display: "block" }} 
+        />
       </div>
       <div>
         <div style={{ fontFamily: "'Sora',sans-serif", fontWeight: 800, fontSize: size * 0.38, color: "#1B4FD8", letterSpacing: 1, lineHeight: 1 }}>rit</div>
-        <div style={{ fontFamily: "'Sora',sans-serif", fontWeight: 500, fontSize: size * 0.18, color: "#1340B0", lineHeight: 1.2 }}>RAJALAKSHMI<br />INSTITUTE OF TECHNOLOGY</div>
+        <div style={{ fontFamily: "'Sora',sans-serif", fontWeight: 500, fontSize: size * 0.18, color: "#1340B0", lineHeight: 1.2 }}>
+          RAJALAKSHMI<br />INSTITUTE OF TECHNOLOGY
+        </div>
       </div>
     </div>
   );

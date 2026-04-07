@@ -8,6 +8,8 @@ import { TrackingPage } from "./components/TrackingPage";
 import { SafetyPage } from "./components/SafetyPage";
 import { AdminPage } from "./components/AdminPage";
 
+
+
 export default function App() {
   const [auth, setAuth] = useState<string | null>(null);
   const [page, setPage] = useState("dashboard");

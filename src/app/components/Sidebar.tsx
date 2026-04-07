@@ -1,4 +1,5 @@
 import { LayoutDashboard, MapPin, Shield, Settings2, LogOut, Bus } from "lucide-react";
+import ritLogo from "../../assets/ritlogo.png";
 
 const navItems = [
   { id: "dashboard", label: "Dashboard", icon: LayoutDashboard },
@@ -30,34 +31,8 @@ export function Sidebar({ page, setPage, role, onLogout }: SidebarProps) {
     >
       {/* Logo */}
       <div style={{ padding: "22px 20px 18px", borderBottom: "1px solid #F1F5F9" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
-          <div
-            style={{
-              width: 42,
-              height: 42,
-              borderRadius: "50%",
-              background: "linear-gradient(135deg, #1B4FD8 60%, #93C5FD 100%)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              boxShadow: "0 3px 12px #1B4FD830",
-              flexShrink: 0,
-            }}
-          >
-            <svg width="22" height="22" viewBox="0 0 32 36" fill="none">
-              <path d="M16 2C10 2 6 8 6 14C6 22 16 34 16 34C16 34 26 22 26 14C26 8 22 2 16 2Z" fill="#fff" opacity="0.18" />
-              <path d="M16 5L16 28" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" />
-              <path d="M16 10L11 15" stroke="#fff" strokeWidth="1.3" strokeLinecap="round" />
-              <path d="M16 10L21 15" stroke="#fff" strokeWidth="1.3" strokeLinecap="round" />
-              <path d="M16 17L12 21" stroke="#fff" strokeWidth="1.1" strokeLinecap="round" />
-              <path d="M16 17L20 21" stroke="#fff" strokeWidth="1.1" strokeLinecap="round" />
-              <circle cx="16" cy="10" r="2" fill="#F97316" />
-            </svg>
-          </div>
-          <div>
-            <div style={{ fontWeight: 800, fontSize: 17, color: "#1B4FD8", letterSpacing: 1, lineHeight: 1 }}>rit</div>
-            <div style={{ fontSize: 9, color: "#64748B", lineHeight: 1.5, marginTop: 2 }}>RAJALAKSHMI INSTITUTE</div>
-          </div>
+        <div style={{ display: "flex", alignItems: "center", marginBottom: 12 }}>
+          <img src={ritLogo} alt="RIT Logo" style={{ height: 40, width: "auto" }} />
         </div>
         <div
           style={{
